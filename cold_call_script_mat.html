@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Call Script — Mat</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #ffffff; --bg2: #f5f5f3; --bg3: #efefec;
+  --tx: #1a1a18; --tx2: #6b6b67; --tx3: #9b9b96;
+  --bd: rgba(0,0,0,0.12); --bd2: rgba(0,0,0,0.22);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a18; --bg2: #242422; --bg3: #2e2e2b;
+    --tx: #f0f0ec; --tx2: #9b9b96; --tx3: #6b6b67;
+    --bd: rgba(255,255,255,0.1); --bd2: rgba(255,255,255,0.2);
+  }
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg3); color: var(--tx); padding: 1.5rem 1rem; }
+.wrap { max-width: 680px; margin: 0 auto; background: var(--bg); border-radius: 12px; padding: 1.75rem; }
+h1 { font-size: 12px; font-weight: 500; color: var(--tx3); text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 4px; }
+h2 { font-size: 22px; font-weight: 500; margin-bottom: 1.5rem; }
+.tabrow { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.5rem; }
+.tab {
+  font-size: 13px; font-family: inherit;
+  padding: 8px 14px; border-radius: 100px;
+  border: 1px solid var(--bd2);
+  background: var(--bg); color: var(--tx2);
+  cursor: pointer;
+}
+.tab.on { background: var(--tx); color: var(--bg); border-color: var(--tx); }
+.panel { display: none; }
+.panel.on { display: block; }
+.lbl { font-size: 11px; font-weight: 500; color: var(--tx3); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; margin-top: 1.25rem; }
+.lbl:first-child { margin-top: 0; }
+.card { background: var(--bg2); border-radius: 10px; padding: 1rem 1.1rem; margin-bottom: 8px; }
+.card p, .card div.body { font-size: 15px; color: var(--tx); line-height: 1.7; }
+.vl { font-size: 11px; font-weight: 500; color: var(--tx3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+.tip { border-left: 2px solid var(--bd2); padding: 6px 0 6px 12px; margin-bottom: 8px; }
+.tip p { font-size: 13px; color: var(--tx2); line-height: 1.6; }
+.tiplbl { font-size: 11px; font-weight: 500; color: var(--tx3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+.ocard { border: 1px solid var(--bd2); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+.otrig {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 1.1rem; background: var(--bg);
+  border: none; font-family: inherit; cursor: pointer; text-align: left;
+}
+.otrig .q { font-size: 14px; font-weight: 500; color: var(--tx); }
+.otrig .arr { font-size: 11px; color: var(--tx3); margin-left: 10px; flex-shrink: 0; }
+.obody { display: none; padding: 4px 1.1rem 1.1rem; border-top: 1px solid var(--bd); }
+.obody.on { display: block; }
+.oval { font-size: 13px; color: var(--tx2); padding: 8px 0 4px; font-style: italic; }
+.ores { font-size: 15px; color: var(--tx); line-height: 1.7; }
+.onote { font-size: 12px; color: var(--tx3); padding-top: 6px; }
+.bizrow { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.1rem; }
+.bb {
+  font-size: 12px; font-family: inherit;
+  padding: 7px 13px; border-radius: 100px;
+  border: 1px solid var(--bd2);
+  background: var(--bg); color: var(--tx2);
+  cursor: pointer;
+}
+.bb.on { border-color: var(--tx); color: var(--tx); font-weight: 600; }
+.bp { display: none; }
+.bp.on { display: block; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.tcell { background: var(--bg2); border-radius: 8px; padding: 10px 12px; }
+.tcell .tl { font-size: 11px; font-weight: 500; color: var(--tx3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+.tcell p { font-size: 13px; color: var(--tx2); line-height: 1.5; }
+.div { height: 1px; background: var(--bd); margin: 1.1rem 0; }
+.step { display: flex; gap: 12px; margin-bottom: 10px; }
+.num { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--bg2); border: 1px solid var(--bd2); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; color: var(--tx2); margin-top: 2px; }
+.sl { font-size: 12px; font-weight: 500; color: var(--tx2); margin-bottom: 2px; }
+.st { font-size: 14px; color: var(--tx); line-height: 1.6; }
+b { font-weight: 600; }
+@media (max-width: 480px) { .wrap { padding: 1.1rem; } .grid2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Cold call script system</h1>
+<h2>Local service businesses — no website</h2>
+
+<div class="tabrow">
+  <button class="tab on"        onclick="showTab('opens',this)">Openings</button>
+  <button class="tab"           onclick="showTab('pitch',this)">Core pitch</button>
+  <button class="tab"           onclick="showTab('offer',this)">The offer</button>
+  <button class="tab"           onclick="showTab('objections',this)">Objections</button>
+  <button class="tab"           onclick="showTab('close',this)">Closing</button>
+  <button class="tab"           onclick="showTab('byco',this)">By company</button>
+  <button class="tab"           onclick="showTab('tone',this)">Tone guide</button>
+</div>
+
+<!-- OPENINGS -->
+<div class="panel on" id="panel-opens">
+  <div class="lbl">Openings — pick one, say it like a thought</div>
+  <div class="card"><div class="vl">A — Default</div><p>"Hey, is this [business]? My name's Mat, I'm a web designer locally. I came across your business doing some research — you've got strong reviews but no website. I had a thought I wanted to run by you — got about a minute?"</p></div>
+  <div class="card"><div class="vl">B — Lean into curiosity</div><p>"Hey, this might be a little random — I'm Mat, I do web design. I was looking at [trade] companies in the area and yours stood out. Reviews are genuinely good, but there's no website. Is that intentional, or just something that hasn't happened yet?"</p></div>
+  <div class="card"><div class="vl">C — If they sound busy or guarded</div><p>"I'll keep it short — I'm Mat, I build websites for local businesses. Yours caught my eye because your Google reputation is solid but there's no site behind it. I had an idea — is now a decent time?"</p></div>
+  <div class="card"><div class="vl">D — If they ask "what's this about"</div><p>"Yeah, fair — I'm Mat, I build websites. Not trying to sell you anything right now. I noticed your reviews are strong and there's no website, and I had an idea I wanted to share. No pitch, I promise — just a thought."</p></div>
+  <div class="tip"><p>Lead with what you noticed, not what you sell. You're calling because something specific caught your attention.</p></div>
+</div>
+
+<!-- CORE PITCH -->
+<div class="panel" id="panel-pitch">
+  <div class="lbl">The core observation</div>
+  <div class="card"><div class="vl">Full version</div><p>"You've got reviews — specific ones, where people talk about the actual experience. That's real word-of-mouth. But when someone finds you online and lands on a Facebook page or a Google listing, they're in someone else's space — ads, their layout, whatever else is going on. <b>A website is the one place online that's completely yours.</b> You control what they see, how you explain your services, how they reach you."</p></div>
+  <div class="card"><div class="vl">Short version</div><p>"You're findable — but findable and compelling aren't the same thing. A website is where you actually get to make the case."</p></div>
+  <div class="lbl">By trade</div>
+  <div class="card"><div class="vl">HVAC</div><p>"When someone's furnace goes out at 9pm and they Google HVAC, they might find your listing — but then what? They see a Google profile with your number and some reviews. A website is where you make the case for why they should call you instead of the next guy. <b>The listing gets you found. The website gets you chosen.</b>"</p></div>
+  <div class="card"><div class="vl">Lawn care</div><p>"Lawn care bookings happen in late winter — people go online, compare, check reviews. You've got the reviews, there's just nothing to land on that tells your story. A Google listing is a starting point. <b>A website is where someone actually decides to call you.</b>"</p></div>
+  <div class="card"><div class="vl">Painting</div><p>"People can see some photos on your Google listing or Yelp — but those platforms control everything around them. Ads, competitor listings, whatever reviews they want to surface. A website is where you show your best work the way you'd actually want someone to see it. <b>You're telling your own story instead of letting someone else's platform tell it.</b>"</p></div>
+  <div class="card"><div class="vl">Pest control</div><p>"Your Facebook page probably does show up in search — that's good. But when someone clicks and lands there, they're in Facebook's world. A website is the one place that's just about you: your services, your process, how to reach you. <b>Found is not the same as yours.</b>"</p></div>
+</div>
+
+<!-- THE OFFER -->
+<div class="panel" id="panel-offer">
+  <div class="lbl">The transition</div>
+  <div class="card"><p>"Here's why I'm calling — and this is a little different from how this usually goes. I'm not going to ask you to commit to anything. I'd rather just build it first, and then let you decide."</p></div>
+  <div class="lbl">The offer</div>
+  <div class="card"><div class="vl">Standard</div><p>"I'll build you a fully custom site — designed for your business, your services, your reviews — in three business days. Nothing out of your pocket. Once it's done, I'll send you a link. You look at it, if it feels right we talk. If not, no hard feelings. <b>You've got nothing to lose by just seeing it.</b>"</p></div>
+  <div class="card"><div class="vl">Short version</div><p>"I build it, you look at it, you decide. Three days, nothing owed."</p></div>
+  <div class="tip"><p>They're not saying yes to buying a website. They're saying yes to looking at something that already exists. Completely different ask.</p></div>
+  <div class="tip"><div class="tiplbl">If price comes up</div><p>"$1,200 for a one-pager, $2,250 for multi-page. Hosting and maintenance is $129 or $149 a month. But honestly — look at it first. If it doesn't feel worth it, the conversation stops there."</p></div>
+</div>
+
+<!-- OBJECTIONS -->
+<div class="panel" id="panel-objections">
+  <div class="lbl">Objections — tap to expand</div>
+  <div class="ocard">
+    <button class="otrig" onclick="showObj('o1',this)"><span class="q">"We already get enough business"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o1"><div class="oval">Validate it — genuinely.</div><p class="ores">"That's great to hear — and I'm not trying to fix something that isn't broken. The only thing I'd say is that the businesses I've seen get hit hardest are the ones that were busy right up until a slow stretch hit. A website isn't just about getting more calls — it's also there when things get quieter. But if now's not the time, I get it."</p><div class="onote">Then pause. Let them fill the silence.</div></div>
+  </div>
+  <div class="ocard">
+    <button class="otrig" onclick="showObj('o2',this)"><span class="q">"We use Facebook instead"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o2"><div class="oval">Don't knock it — and don't claim it doesn't show up in search.</div><p class="ores">"That makes sense — and your Facebook page probably does show up when people search for you. The gap isn't really about being found, it's about what happens after they click. They land on Facebook and they're in Facebook's world — ads, their layout, whatever else is on the feed. A website is the one place that's completely yours. You decide what they see, how you explain your services, how they reach you."</p></div>
+  </div>
+  <div class="ocard">
+    <button class="otrig" onclick="showObj('o3',this)"><span class="q">"We've thought about it but haven't gotten to it"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o3"><div class="oval">Most common thing I hear.</div><p class="ores">"Totally makes sense — it always feels like it can wait. What I'm offering takes that off the table. I do the work first. You don't manage anything or deal with back-and-forth — you just open a link and tell me what you think. I'm trying to make the starting part free."</p></div>
+  </div>
+  <div class="ocard">
+    <button class="otrig" onclick="showObj('o4',this)"><span class="q">"How much does it cost?"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o4"><div class="oval">Good sign — answer it straight.</div><p class="ores">"One-page site is $1,200, multi-page is $2,250. Hosting and maintenance after that is $129 a month. But I lead with 'see it first' because I'd rather you make that call based on what you're actually getting, not just a number."</p></div>
+  </div>
+  <div class="ocard">
+    <button class="otrig" onclick="showObj('o5',this)"><span class="q">"I'm not interested"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o5"><div class="oval">Respect it immediately.</div><p class="ores">"Totally fair. One thing I'll say before I let you go — there's nothing to commit to upfront. But I understand if it's not the right time. Would it be alright if I checked back in a month or so?"</p><div class="onote">If they say no, just say "understood, good luck with the season" and move on.</div></div>
+  </div>
+  <div class="ocard">
+    <button class="otrig" onclick="showObj('o6',this)"><span class="q">"Sounds too good to be true"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o6"><div class="oval">Don't get defensive. Agree with them.</div><p class="ores">"I get that — I'd probably think the same thing. The hardest part of my job is getting someone to trust a stranger enough to take a chance. So I started building it first, at my cost, because it removes that whole barrier. <b>There's nothing in this for me unless you're genuinely happy with it.</b>"</p></div>
+  </div>
+</div>
+
+<!-- CLOSING -->
+<div class="panel" id="panel-close">
+  <div class="lbl">Closing — permission, not pressure</div>
+  <div class="card"><div class="vl">Best close</div><p>"Give me the go-ahead and I'll have something for you to look at by [day]. You don't have to commit to anything — just willing to take 5 minutes to look at a link. Is that something you'd be open to?"</p></div>
+  <div class="card"><div class="vl">If interested but hesitant</div><p>"What would need to be true for this to feel worth a look? I'd rather just answer that directly."</p></div>
+  <div class="card"><div class="vl">If they want time to think</div><p>"That makes sense. Can I call you back [day]? I'll keep it short."</p></div>
+  <div class="card"><div class="vl">If they say yes</div><p>"Perfect. I just need your business name, a quick description of what you do, and any photos you've got. If you don't have photos, I can work with what's public. I'll send you a link by [day]."</p></div>
+  <div class="tip"><div class="tiplbl">Never say</div><p>"So are we doing this?" / "Do we have a deal?" — kills the whole tone.</p></div>
+</div>
+
+<!-- BY COMPANY -->
+<div class="panel" id="panel-byco">
+  <div class="lbl">Select a business</div>
+  <div class="bizrow">
+    <button class="bb on" onclick="showBiz('bp',this)">Brooklyn Park H&amp;C</button>
+    <button class="bb"    onclick="showBiz('lr',this)">Leroy's Lawn Care</button>
+    <button class="bb"    onclick="showBiz('sv',this)">Sevans Painting</button>
+    <button class="bb"    onclick="showBiz('sh',this)">Shakopee H&amp;C</button>
+    <button class="bb"    onclick="showBiz('br',this)">Bright Pest</button>
+  </div>
+  <div class="bp on" id="biz-bp">
+    <div class="card"><div class="vl">Brooklyn Park Heating &amp; Cooling</div><p>"Hey — is this Brooklyn Park Heating and Cooling? My name's Mat, I'm a local web designer. I came across your business and you've got a solid Google rating, but no website. When someone's heat goes out at 9pm and they search for HVAC, they might find your listing — but a listing just has your number and some reviews. A website is where you actually make the case for why they should call you. Got a minute?"</p></div>
+    <div class="tip"><div class="tiplbl">Angle</div><p>The listing gets you found. The website gets you chosen. Don't overclaim — they may show up in search already.</p></div>
+  </div>
+  <div class="bp" id="biz-lr">
+    <div class="card"><div class="vl">Leroy's Lawn Care</div><p>"Hi — is this Leroy's? I'm Mat — I do web design locally. I was looking at lawn care businesses in the area and your reviews stood out — people are specific about why they like working with you. But there's no website, and most lawn care bookings happen in late winter when people are researching online. A Google listing is a starting point — a website is where someone actually decides to call. Wanted to run something by you."</p></div>
+    <div class="tip"><div class="tiplbl">Angle</div><p>Seasonal planning. Being found is step one — being chosen is step two. The website closes that gap.</p></div>
+  </div>
+  <div class="bp" id="biz-sv">
+    <div class="card"><div class="vl">Sevans Painting</div><p>"Hi, is this Sevans Painting? I'm Mat — I do web design. I found you while looking at painting contractors locally, and your reviews are genuinely strong. But there's no website — and with painting, the photos are everything. People can see a few on your Google listing, but that's Google's platform, Google's layout, Google's ads next to your work. A website is where you show your best jobs the way you'd actually want someone to see them. Got a minute?"</p></div>
+    <div class="tip"><div class="tiplbl">Angle</div><p>Don't say they have no photos online — they do. The argument is those photos live on someone else's platform.</p></div>
+  </div>
+  <div class="bp" id="biz-sh">
+    <div class="card"><div class="vl">Shakopee Heating &amp; Cooling</div><p>"Hey — is this Shakopee Heating and Cooling? I'm Mat. I was looking at HVAC companies south of the metro and your reviews are genuinely strong, but there's no website. When someone finds your Google listing, they've got your number and your reviews — but that's it. A website is where you make the actual case: your experience, your response time, why they should call you instead of the next guy. Got 90 seconds?"</p></div>
+    <div class="tip"><div class="tiplbl">Angle</div><p>"South of the metro" signals you actually looked. Framing is found vs. chosen, not visible vs. invisible.</p></div>
+  </div>
+  <div class="bp" id="biz-br">
+    <div class="card"><div class="vl">Bright Pest Solutions</div><p>"Hey — is this Bright Pest Solutions? I'm Mat. I was looking at pest control companies in the Twin Cities and your reviews stood out — people write specifically about fast response and actually solving the problem. But no website. Your Facebook page probably shows up when people search — but when they click, they're in Facebook's world. A website is just yours: your services, your process, how to reach you. Wanted to share an idea."</p></div>
+    <div class="tip"><div class="tiplbl">Angle</div><p>Acknowledge their Facebook shows up — don't pretend otherwise. The argument is owned space vs. borrowed space.</p></div>
+  </div>
+</div>
+
+<!-- TONE GUIDE -->
+<div class="panel" id="panel-tone">
+  <div class="lbl">Tone and presence</div>
+  <div class="grid2">
+    <div class="tcell"><div class="tl">Be this</div><p>Calm. Curious. Like you noticed something and wanted to share it.</p></div>
+    <div class="tcell"><div class="tl">Not this</div><p>Urgent. Pitchy. "Limited-time opportunity." Never.</p></div>
+    <div class="tcell"><div class="tl">Your role</div><p>A perceptive local professional who noticed a gap. Not a salesperson with a quota.</p></div>
+    <div class="tcell"><div class="tl">Their experience</div><p>They should feel seen, not sold. Like you actually looked at their business.</p></div>
+    <div class="tcell"><div class="tl">Silence</div><p>After a question — slow down. Let them fill it. The pause is doing work.</p></div>
+    <div class="tcell"><div class="tl">Firm no</div><p>"I appreciate you picking up" — and move on. No re-pitch.</p></div>
+  </div>
+  <div class="div"></div>
+  <div class="lbl">The core argument</div>
+  <div class="card"><p style="font-size:14px;color:var(--tx2);">Being found and being chosen are two different things. A Google listing or Facebook page gets you found. <b>A website is where you get chosen.</b> Don't overclaim visibility they already have — that's the argument that gets caught.</p></div>
+  <div class="div"></div>
+  <div class="lbl">Call flow</div>
+  <div class="step"><div class="num">1</div><div><div class="sl">Confirm + introduce</div><div class="st">Name, local, and why you noticed them specifically.</div></div></div>
+  <div class="step"><div class="num">2</div><div><div class="sl">The observation</div><div class="st">Strong reviews, no website — found vs. chosen is the frame.</div></div></div>
+  <div class="step"><div class="num">3</div><div><div class="sl">Ask a question</div><div class="st">"Is that intentional or just hasn't happened yet?" Then stop talking.</div></div></div>
+  <div class="step"><div class="num">4</div><div><div class="sl">The offer</div><div class="st">Build it first. No cost, no commitment. They just agree to look at a link.</div></div></div>
+  <div class="step"><div class="num">5</div><div><div class="sl">Soft close</div><div class="st">"Would you be open to taking a look?" That's the whole ask.</div></div></div>
+</div>
+
+</div>
+<script>
+var allTabBtns = document.querySelectorAll('.tab');
+var allPanels  = document.querySelectorAll('.panel');
+var allBizBtns = document.querySelectorAll('.bb');
+var allBizPanels = document.querySelectorAll('.bp');
+var allOTrigs  = document.querySelectorAll('.otrig');
+var allOBodies = document.querySelectorAll('.obody');
+
+function showTab(id, btn) {
+  allTabBtns.forEach(function(b){ b.classList.remove('on'); });
+  allPanels.forEach(function(p){ p.classList.remove('on'); });
+  btn.classList.add('on');
+  document.getElementById('panel-' + id).classList.add('on');
+}
+
+function showBiz(id, btn) {
+  allBizBtns.forEach(function(b){ b.classList.remove('on'); });
+  allBizPanels.forEach(function(p){ p.classList.remove('on'); });
+  btn.classList.add('on');
+  document.getElementById('biz-' + id).classList.add('on');
+}
+
+function showObj(id, btn) {
+  var body = document.getElementById(id);
+  var isOpen = body.classList.contains('on');
+  allOTrigs.forEach(function(t){ t.classList.remove('on'); });
+  allOBodies.forEach(function(b){ b.classList.remove('on'); });
+  if (!isOpen) {
+    btn.classList.add('on');
+    body.classList.add('on');
+  }
+}
+</script>
+</body>
+</html>
