@@ -23,13 +23,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Ar
 h1 { font-size: 12px; font-weight: 500; color: var(--tx3); text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 4px; }
 h2 { font-size: 22px; font-weight: 500; margin-bottom: 1.5rem; }
 .tabrow { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.5rem; }
-.tab {
-  font-size: 13px; font-family: inherit;
-  padding: 8px 14px; border-radius: 100px;
-  border: 1px solid var(--bd2);
-  background: var(--bg); color: var(--tx2);
-  cursor: pointer;
-}
+.tab { font-size: 13px; font-family: inherit; padding: 8px 14px; border-radius: 100px; border: 1px solid var(--bd2); background: var(--bg); color: var(--tx2); cursor: pointer; }
 .tab.on { background: var(--tx); color: var(--bg); border-color: var(--tx); }
 .panel { display: none; }
 .panel.on { display: block; }
@@ -42,11 +36,7 @@ h2 { font-size: 22px; font-weight: 500; margin-bottom: 1.5rem; }
 .tip p { font-size: 13px; color: var(--tx2); line-height: 1.6; }
 .tiplbl { font-size: 11px; font-weight: 500; color: var(--tx3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
 .ocard { border: 1px solid var(--bd2); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
-.otrig {
-  width: 100%; display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 1.1rem; background: var(--bg);
-  border: none; font-family: inherit; cursor: pointer; text-align: left;
-}
+.otrig { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 14px 1.1rem; background: var(--bg); border: none; font-family: inherit; cursor: pointer; text-align: left; }
 .otrig .q { font-size: 14px; font-weight: 500; color: var(--tx); }
 .otrig .arr { font-size: 11px; color: var(--tx3); margin-left: 10px; flex-shrink: 0; }
 .obody { display: none; padding: 4px 1.1rem 1.1rem; border-top: 1px solid var(--bd); }
@@ -55,13 +45,7 @@ h2 { font-size: 22px; font-weight: 500; margin-bottom: 1.5rem; }
 .ores { font-size: 15px; color: var(--tx); line-height: 1.7; }
 .onote { font-size: 12px; color: var(--tx3); padding-top: 6px; }
 .bizrow { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.1rem; }
-.bb {
-  font-size: 12px; font-family: inherit;
-  padding: 7px 13px; border-radius: 100px;
-  border: 1px solid var(--bd2);
-  background: var(--bg); color: var(--tx2);
-  cursor: pointer;
-}
+.bb { font-size: 12px; font-family: inherit; padding: 7px 13px; border-radius: 100px; border: 1px solid var(--bd2); background: var(--bg); color: var(--tx2); cursor: pointer; }
 .bb.on { border-color: var(--tx); color: var(--tx); font-weight: 600; }
 .bp { display: none; }
 .bp.on { display: block; }
@@ -99,21 +83,26 @@ b { font-weight: 600; }
   <div class="lbl">Openings — pick one, say it like a thought</div>
   <div class="card"><div class="vl">A — Default</div><p>"Hey, is this [business]? My name's Mat — I co-own a local web design company. I came across your business doing some research — you've got strong reviews but no website. I had a thought I wanted to run by you — got about a minute?"</p></div>
   <div class="card"><div class="vl">B — Lean into curiosity</div><p>"Hey, this might be a little random — I'm Mat, I co-own a local web design company. I was looking at [trade] companies in the area and yours stood out. Reviews are genuinely good, but there's no website. Is that intentional, or just something that hasn't happened yet?"</p></div>
-  <div class="card"><div class="vl">C — If they sound busy or guarded</div><p>"I'll keep it short — I'm Mat, I co-own a local web design company. Yours caught my eye because your Google reputation is solid but there's no site behind it. I had an idea — is now a decent time?"</p></div>
-  <div class="card"><div class="vl">D — If they ask "what's this about"</div><p>"Yeah, fair — I'm Mat, I co-own a local web design company. Not trying to sell you anything right now. I noticed your reviews are strong and there's no website, and I had an idea I wanted to share. No pitch, I promise — just a thought."</p></div>
+  <div class="card"><div class="vl">C — If they sound busy or guarded</div><p>"I'll keep it short — I'm Mat, I co-own a local web design company. Yours caught my eye because your reputation is solid but there's no website behind it. I had an idea — is now a decent time?"</p></div>
+  <div class="card"><div class="vl">D — If they ask "what's this about"</div><p>"Yeah, fair — I'm Mat, I co-own a local web design company. Not trying to sell you anything right now. I noticed your reviews are strong and there's no website, and I had a thought I wanted to share. No pitch, I promise."</p></div>
   <div class="tip"><p>Lead with what you noticed, not what you sell. You're calling because something specific caught your attention.</p></div>
 </div>
 
 <!-- CORE PITCH -->
 <div class="panel" id="panel-pitch">
-  <div class="lbl">The core observation</div>
-  <div class="card"><div class="vl">Full version</div><p>"You've got solid reviews — people are clearly finding you and happy with the work. The thing is, when someone searches for [trade] and lands on a Google listing or a Facebook page, there's nothing pushing them to actually call you. A website gives them everything they need to make that decision right there: what you do, where you work, how to reach you, what past customers said. <b>It's built to turn someone who just found you into someone who calls you.</b>"</p></div>
-  <div class="card"><div class="vl">Short version</div><p>"A Google listing gets you found. A website is what actually gets you hired."</p></div>
+  <div class="lbl">The core idea — internalize this, don't recite it</div>
+  <div class="tip"><p>Most of these guys are already busy. Don't pretend they're struggling. The honest pitch isn't "you're missing business" — it's "a website works in the background without you doing anything differently, and it tends to bring in better jobs from better customers."</p></div>
+
+  <div class="lbl">The core pitch</div>
+  <div class="card"><div class="vl">Full version</div><p>"Most guys in the trades I talk to are already busy — word of mouth does the job. I'm not calling because something's broken. What I've noticed is that the ones with a solid website tend to get a different kind of call. People who found them online come in a little more pre-sold — they've already seen the work, read the reviews, decided they want to hire you before they even pick up the phone. <b>Less back-and-forth, less price shopping, better jobs.</b> It's not about getting more calls — it's about the quality of the ones you get."</p></div>
+  <div class="card"><div class="vl">Short version</div><p>"Word of mouth sends whoever it sends. A website tends to attract people who are already sold before they call."</p></div>
+  <div class="card"><div class="vl">The passive angle — if they're clearly slammed</div><p>"I get it — you don't need more work right now. The thing about a website is it just runs in the background. It's there at 11pm when someone's searching, captures the people who would have hired you but couldn't find you, and when you do have a slot open, those leads are already warm. You don't have to do anything differently."</p></div>
+
   <div class="lbl">By trade</div>
-  <div class="card"><div class="vl">HVAC</div><p>"When someone's furnace goes out at 9pm, they're Googling and calling whoever looks most reliable fastest. A Google listing gives them your number — but a website gives them your services, your response time, maybe a contact form to request service right then. <b>It's the difference between 'here's a number' and 'here's why you should call it.'</b>"</p></div>
-  <div class="card"><div class="vl">Lawn care</div><p>"Most lawn care bookings happen in late winter when people are planning ahead. They're comparing a few options, and they'll spend 2 or 3 minutes on each one. If there's no website, there's nothing to look at — so they move to the next person who does have one. <b>A website gives them something to actually evaluate.</b>"</p></div>
-  <div class="card"><div class="vl">Painting</div><p>"Painting is one of those jobs where people really want to see the work before they commit. Your Google listing might have a few photos, but a website lets you show a proper portfolio — your best jobs, organized the way you'd want them seen. <b>That's what moves someone from 'maybe' to 'I'm calling this guy.'</b>"</p></div>
-  <div class="card"><div class="vl">Pest control</div><p>"Pest calls are usually urgent — someone finds something and wants it handled fast. When they search and find your listing, they've got a phone number. But if they see a website that explains your process, what pests you handle, and has a way to book right there — <b>that's a much easier yes than just a phone number sitting in a Google listing.</b>"</p></div>
+  <div class="card"><div class="vl">HVAC</div><p>"The calls you probably love are the ones where someone's already decided — they just need a time. A website does a lot of that work ahead of the call. Someone finds you, sees your reviews, sees what you handle, and by the time they dial they're not shopping around anymore. <b>You get fewer 'what's your price?' calls and more 'when can you come out?' calls.</b>"</p></div>
+  <div class="card"><div class="vl">Lawn care</div><p>"Lawn care is competitive — a lot of guys doing similar work. The ones with a website tend to pull the customers who care enough to look, which usually means they care enough to stick around year after year. <b>Word of mouth gets you one-time jobs. A website helps you build a recurring base.</b>"</p></div>
+  <div class="card"><div class="vl">Painting</div><p>"Painting's one of those jobs where the customer has to really trust you before they let you in. A website with your portfolio does a lot of that trust-building before the first conversation — they've already seen the quality, already read what past customers said. <b>By the time they call, you're not selling anymore. You're just scheduling.</b>"</p></div>
+  <div class="card"><div class="vl">Pest control</div><p>"Pest calls are urgent — people want someone fast and reliable. When they find you online and there's a real website explaining what you treat and how you work, they're not calling three other companies to compare. <b>A website pre-qualifies the customer. You get calls from people who've already decided.</b>"</p></div>
 </div>
 
 <!-- THE OFFER -->
@@ -121,7 +110,7 @@ b { font-weight: 600; }
   <div class="lbl">The transition</div>
   <div class="card"><p>"Here's why I'm calling — and this is a little different from how this usually goes. I'm not going to ask you to commit to anything. I'd rather just build it first, and then let you decide."</p></div>
   <div class="lbl">The offer</div>
-  <div class="card"><div class="vl">Standard</div><p>"I'll build you a fully custom site — designed for your business, your services, your reviews — in three business days. Nothing out of your pocket. Once it's done, I'll send you a link. You look at it, if it feels right we talk. If not, no hard feelings. <b>You've got nothing to lose by just seeing it.</b>"</p></div>
+  <div class="card"><div class="vl">Standard</div><p>"I'll build you a fully custom site — designed around your business, your services, your reviews — in three business days. Nothing out of your pocket. Once it's done, I'll send you a link. You look at it, if it feels right we talk. If not, no hard feelings. <b>You've got nothing to lose by just seeing it.</b>"</p></div>
   <div class="card"><div class="vl">Short version</div><p>"I build it, you look at it, you decide. Three days, nothing owed."</p></div>
   <div class="tip"><p>They're not saying yes to buying a website. They're saying yes to looking at something that already exists. Completely different ask.</p></div>
   <div class="tip"><div class="tiplbl">If price comes up</div><p>"$1,200 for a one-pager, $2,250 for multi-page. Hosting and maintenance is $129 or $149 a month. But honestly — look at it first. If it doesn't feel worth it, the conversation stops there."</p></div>
@@ -132,27 +121,53 @@ b { font-weight: 600; }
   <div class="lbl">Objections — tap to expand</div>
   <div class="ocard">
     <button class="otrig" onclick="showObj('o1',this)"><span class="q">"We already get enough business"</span><span class="arr">▼</span></button>
-    <div class="obody" id="o1"><div class="oval">Validate it — genuinely.</div><p class="ores">"That's great to hear — and I'm not trying to fix something that isn't broken. The only thing I'd say is that the businesses I've seen get hit hardest are the ones that were busy right up until a slow stretch hit. A website isn't just about getting more calls — it's also there working for you when things get quieter. But if now's not the time, I get it."</p><div class="onote">Then pause. Let them fill the silence.</div></div>
+    <div class="obody" id="o1">
+      <div class="oval">Don't fight it — agree, then reframe.</div>
+      <p class="ores">"Good — that's actually the best time to do this. You're not making decisions out of desperation, you can be selective. What a website really does for a busy guy is raise the floor on the kind of work that comes in. People who find you online and do their homework before calling tend to be easier customers — less price haggling, clearer on what they want. It's not about more work, it's about better work."</p>
+    </div>
   </div>
   <div class="ocard">
-    <button class="otrig" onclick="showObj('o2',this)"><span class="q">"We use Facebook instead"</span><span class="arr">▼</span></button>
-    <div class="obody" id="o2"><div class="oval">Don't knock it.</div><p class="ores">"Facebook's great for staying in front of people who already know you. The difference is what happens when a stranger finds you cold — they land on your Facebook page and there's no clear way to quickly figure out what you do, where you work, and how to book you. A website is built specifically for that moment. It's designed to answer those questions fast and make it easy to take the next step. Facebook's built for engagement, a website's built for conversion."</p></div>
+    <button class="otrig" onclick="showObj('o2',this)"><span class="q">"Word of mouth works fine for us"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o2">
+      <div class="oval">Respect it — word of mouth is genuinely valuable.</div>
+      <p class="ores">"It does — and I'm not trying to replace it. The thing about word of mouth is it sends whoever it sends. A website gives you a little more control over who finds you and what they think before they call. People who find you through a website tend to come in more pre-sold, less price sensitive. The two work well together — word of mouth builds trust, a website lets strangers find that trust on their own."</p>
+    </div>
   </div>
   <div class="ocard">
-    <button class="otrig" onclick="showObj('o3',this)"><span class="q">"We've thought about it but haven't gotten to it"</span><span class="arr">▼</span></button>
-    <div class="obody" id="o3"><div class="oval">Most common thing I hear.</div><p class="ores">"Totally makes sense — it always feels like it can wait. What I'm offering takes that off the table. I do the work first. You don't manage anything or deal with back-and-forth — you just open a link and tell me what you think. I'm trying to make the starting part free."</p></div>
+    <button class="otrig" onclick="showObj('o3',this)"><span class="q">"We use Facebook instead"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o3">
+      <div class="oval">Don't knock it.</div>
+      <p class="ores">"Facebook's great for staying in front of people who already know you. The difference is a cold stranger who searches for [trade] and lands on your Facebook page — they're not in buying mode on Facebook, they're in scrolling mode. A website is purpose-built for someone who's actively looking to hire. It answers the right questions in the right order and makes it easy to take the next step."</p>
+    </div>
   </div>
   <div class="ocard">
-    <button class="otrig" onclick="showObj('o4',this)"><span class="q">"How much does it cost?"</span><span class="arr">▼</span></button>
-    <div class="obody" id="o4"><div class="oval">Good sign — answer it straight.</div><p class="ores">"One-page site is $1,200, multi-page is $2,250. Hosting and maintenance after that is $129 a month. But I lead with 'see it first' because I'd rather you make that call based on what you're actually getting, not just a number."</p></div>
+    <button class="otrig" onclick="showObj('o4',this)"><span class="q">"We've thought about it but haven't gotten to it"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o4">
+      <div class="oval">Most common thing I hear.</div>
+      <p class="ores">"Totally makes sense — it always feels like it can wait. What I'm offering takes that off the table. I do the work first. You don't manage anything or deal with back-and-forth — you just open a link and tell me what you think. I'm trying to make the starting part free."</p>
+    </div>
   </div>
   <div class="ocard">
-    <button class="otrig" onclick="showObj('o5',this)"><span class="q">"I'm not interested"</span><span class="arr">▼</span></button>
-    <div class="obody" id="o5"><div class="oval">Respect it immediately.</div><p class="ores">"Totally fair. One thing I'll say before I let you go — there's nothing to commit to upfront. But I understand if it's not the right time. Would it be alright if I checked back in a month or so?"</p><div class="onote">If they say no, just say "understood, good luck with the season" and move on.</div></div>
+    <button class="otrig" onclick="showObj('o5',this)"><span class="q">"How much does it cost?"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o5">
+      <div class="oval">Good sign — answer it straight.</div>
+      <p class="ores">"One-page site is $1,200, multi-page is $2,250. Hosting and maintenance after that is $129 a month. But I lead with 'see it first' because I'd rather you make that call based on what you're actually getting, not just a number."</p>
+    </div>
   </div>
   <div class="ocard">
-    <button class="otrig" onclick="showObj('o6',this)"><span class="q">"Sounds too good to be true"</span><span class="arr">▼</span></button>
-    <div class="obody" id="o6"><div class="oval">Don't get defensive. Agree with them.</div><p class="ores">"I get that — I'd probably think the same thing. The hardest part of my job is getting someone to trust a stranger enough to take a chance. So I started building it first, at my cost, because it removes that whole barrier. <b>There's nothing in this for me unless you're genuinely happy with it.</b>"</p></div>
+    <button class="otrig" onclick="showObj('o6',this)"><span class="q">"I'm not interested"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o6">
+      <div class="oval">Respect it immediately.</div>
+      <p class="ores">"Totally fair. One thing I'll say before I let you go — there's nothing to commit to upfront. But I understand if it's not the right time. Would it be alright if I checked back in a month or so?"</p>
+      <div class="onote">If they say no, just say "understood, good luck with the season" and move on.</div>
+    </div>
+  </div>
+  <div class="ocard">
+    <button class="otrig" onclick="showObj('o7',this)"><span class="q">"Sounds too good to be true"</span><span class="arr">▼</span></button>
+    <div class="obody" id="o7">
+      <div class="oval">Don't get defensive. Agree with them.</div>
+      <p class="ores">"I get that — I'd probably think the same thing. The hardest part of my job is getting someone to trust a stranger enough to take a chance. So I started building it first, at my cost, because it removes that whole barrier. <b>There's nothing in this for me unless you're genuinely happy with it.</b>"</p>
+    </div>
   </div>
 </div>
 
@@ -176,25 +191,30 @@ b { font-weight: 600; }
     <button class="bb"    onclick="showBiz('sh',this)">Shakopee H&amp;C</button>
     <button class="bb"    onclick="showBiz('br',this)">Bright Pest</button>
   </div>
+
   <div class="bp on" id="biz-bp">
-    <div class="card"><div class="vl">Brooklyn Park Heating &amp; Cooling</div><p>"Hey — is this Brooklyn Park Heating and Cooling? My name's Mat — I co-own a local web design company. I came across your business and you've got a solid Google rating, but no website. When someone's heat goes out at 9pm they're searching fast and calling whoever looks most reliable — a listing gives them your number, but a website gives them your experience, your response time, a way to request service right then. That's what actually gets you the call. Got a minute?"</p></div>
-    <div class="tip"><div class="tiplbl">Angle</div><p>Speed and reliability. HVAC decisions happen fast — a website gives them more reason to call you specifically, not just whoever's first.</p></div>
+    <div class="card"><div class="vl">Brooklyn Park Heating &amp; Cooling</div><p>"Hey — is this Brooklyn Park Heating and Cooling? My name's Mat — I co-own a local web design company. I came across your business — solid reviews, no website. I'm not calling because something's wrong. I just noticed that HVAC companies with a real website tend to get a different kind of customer — people who've already looked them up, read the reviews, decided they want to hire them before they even call. Less shopping around, better jobs. Wanted to run something by you — got a minute?"</p></div>
+    <div class="tip"><div class="tiplbl">Angle</div><p>Better customers, not more customers. HVAC guys don't need more calls — they need fewer tire-kickers and more "when can you come out?"</p></div>
   </div>
+
   <div class="bp" id="biz-lr">
-    <div class="card"><div class="vl">Leroy's Lawn Care</div><p>"Hi — is this Leroy's? I'm Mat, I co-own a local web design company. I was looking at lawn care businesses in the area and your reviews stood out. But there's no website, and most lawn care bookings happen in late winter when people are comparing options online. If there's no website, there's nothing to look at — so they move on to whoever does have one. Wanted to run something by you."</p></div>
-    <div class="tip"><div class="tiplbl">Angle</div><p>Comparison shopping. People spend a few minutes evaluating each option — no website means nothing to evaluate.</p></div>
+    <div class="card"><div class="vl">Leroy's Lawn Care</div><p>"Hi — is this Leroy's? I'm Mat, I co-own a local web design company. I came across your reviews and they're genuinely strong — people are specific about why they like working with you. I noticed there's no website though. The lawn care guys I've seen with a solid site tend to build a more loyal recurring base — the kind of customers who find you, do their homework, and stick around year after year instead of shopping around every spring. Wanted to run something by you."</p></div>
+    <div class="tip"><div class="tiplbl">Angle</div><p>Recurring customers vs. one-time jobs. A website attracts people who researched before calling — those tend to be long-term customers.</p></div>
   </div>
+
   <div class="bp" id="biz-sv">
-    <div class="card"><div class="vl">Sevans Painting</div><p>"Hi, is this Sevans Painting? I'm Mat, I co-own a local web design company. I found you while looking at painting contractors locally, and your reviews are genuinely strong. But there's no website — and painting is one of those jobs where people really want to see the work before they commit. A website lets you show a proper portfolio, your best jobs organized the way you'd want them seen. That's what moves someone from 'maybe' to 'I'm calling this guy.' Got a minute?"</p></div>
-    <div class="tip"><div class="tiplbl">Angle</div><p>Portfolio matters. A few photos on a Google listing aren't the same as a site built around showcasing the work.</p></div>
+    <div class="card"><div class="vl">Sevans Painting</div><p>"Hi, is this Sevans Painting? I'm Mat, I co-own a local web design company. I found you while looking at painters locally — your reviews are legitimately strong. No website though. Painting's one of those jobs where people really want to see the work and feel confident before they call. A website with your portfolio does that trust-building ahead of the conversation — by the time they reach out, they've already decided. You're not selling, you're just scheduling. Wanted to share that idea — got a minute?"</p></div>
+    <div class="tip"><div class="tiplbl">Angle</div><p>Trust before the call. A portfolio site means customers arrive pre-sold — less convincing, more scheduling.</p></div>
   </div>
+
   <div class="bp" id="biz-sh">
-    <div class="card"><div class="vl">Shakopee Heating &amp; Cooling</div><p>"Hey — is this Shakopee Heating and Cooling? I'm Mat. I was looking at HVAC companies south of the metro and your reviews are genuinely strong, but there's no website. When someone finds your Google listing they've got your number — but a website gives them your services, your experience, maybe a contact form to request service right then. That's what turns a search into a phone call. Got 90 seconds?"</p></div>
-    <div class="tip"><div class="tiplbl">Angle</div><p>"South of the metro" signals you actually looked. Focus on converting the search into a call, not just being visible.</p></div>
+    <div class="card"><div class="vl">Shakopee Heating &amp; Cooling</div><p>"Hey — is this Shakopee Heating and Cooling? I'm Mat, I co-own a local web design company. I was looking at HVAC companies south of the metro and your reviews are solid — but no website. The thing I've noticed is that HVAC companies with a real site tend to get calls from people who've already done their homework. They've seen your reviews, seen what you handle, and by the time they call they're not comparing you to three other guys. Got 90 seconds?"</p></div>
+    <div class="tip"><div class="tiplbl">Angle</div><p>Pre-sold customers. "South of the metro" shows you actually looked. Less about getting found, more about getting chosen without the back-and-forth.</p></div>
   </div>
+
   <div class="bp" id="biz-br">
-    <div class="card"><div class="vl">Bright Pest Solutions</div><p>"Hey — is this Bright Pest Solutions? I'm Mat. I was looking at pest control companies in the Twin Cities and your reviews stood out — people write specifically about fast response and actually solving the problem. But no website. When someone finds a pest issue and searches, they want to act fast — a website that explains what you treat, your process, and has a way to book right there is a much easier yes than just a phone number in a listing. Wanted to share an idea."</p></div>
-    <div class="tip"><div class="tiplbl">Angle</div><p>Urgency plus friction reduction. A website removes steps between "I found them" and "I booked them."</p></div>
+    <div class="card"><div class="vl">Bright Pest Solutions</div><p>"Hey — is this Bright Pest Solutions? I'm Mat, I co-own a local web design company. I came across your reviews — people write specifically about fast response and actually solving the problem, which stands out. No website though. When someone finds a pest issue and searches, they're urgent — they want to pick someone fast. A website that explains what you treat and how you work means they land on you, feel confident, and call. They're not shopping around. Wanted to share an idea."</p></div>
+    <div class="tip"><div class="tiplbl">Angle</div><p>Urgency plus confidence. Pest customers decide fast — a website gives them enough to feel confident without calling three other companies first.</p></div>
   </div>
 </div>
 
@@ -202,21 +222,21 @@ b { font-weight: 600; }
 <div class="panel" id="panel-tone">
   <div class="lbl">Tone and presence</div>
   <div class="grid2">
-    <div class="tcell"><div class="tl">Be this</div><p>Calm. Curious. Like you noticed something and wanted to share it.</p></div>
-    <div class="tcell"><div class="tl">Not this</div><p>Urgent. Pitchy. "Limited-time opportunity." Never.</p></div>
-    <div class="tcell"><div class="tl">Your role</div><p>A perceptive local professional who noticed a gap. Not a salesperson with a quota.</p></div>
-    <div class="tcell"><div class="tl">Their experience</div><p>They should feel seen, not sold. Like you actually looked at their business.</p></div>
+    <div class="tcell"><div class="tl">Be this</div><p>Calm. Curious. Talking to someone who's doing fine — not rescuing them.</p></div>
+    <div class="tcell"><div class="tl">Not this</div><p>Urgent. Pitchy. Implying they're missing out or falling behind.</p></div>
+    <div class="tcell"><div class="tl">Their reality</div><p>They're probably busy. Word of mouth works. Don't pretend otherwise.</p></div>
+    <div class="tcell"><div class="tl">Your angle</div><p>Not more business — better business. Customers who arrive pre-sold.</p></div>
     <div class="tcell"><div class="tl">Silence</div><p>After a question — slow down. Let them fill it. The pause is doing work.</p></div>
     <div class="tcell"><div class="tl">Firm no</div><p>"I appreciate you picking up" — and move on. No re-pitch.</p></div>
   </div>
   <div class="div"></div>
   <div class="lbl">The core argument</div>
-  <div class="card"><p style="font-size:14px;color:var(--tx2);">A Google listing or Facebook page gets you found. <b>A website is what actually gets you hired.</b> It's built for the moment someone's ready to make a decision — not for scrolling, not for engagement. That's the practical difference.</p></div>
+  <div class="card"><p style="font-size:14px;color:var(--tx2);">Word of mouth sends whoever it sends. <b>A website lets better customers find you on their own terms</b> — they research, they decide, and they call ready to hire. Less price shopping, less back-and-forth, better jobs. It runs in the background without them doing anything differently.</p></div>
   <div class="div"></div>
   <div class="lbl">Call flow</div>
-  <div class="step"><div class="num">1</div><div><div class="sl">Confirm + introduce</div><div class="st">Name, local, and why you noticed them specifically.</div></div></div>
-  <div class="step"><div class="num">2</div><div><div class="sl">The observation</div><div class="st">Strong reviews, no website — a listing gets you found, a website gets you hired.</div></div></div>
-  <div class="step"><div class="num">3</div><div><div class="sl">Ask a question</div><div class="st">"Is that intentional or just hasn't happened yet?" Then stop talking.</div></div></div>
+  <div class="step"><div class="num">1</div><div><div class="sl">Confirm + introduce</div><div class="st">Name, co-own a local web design company, why you noticed them.</div></div></div>
+  <div class="step"><div class="num">2</div><div><div class="sl">The observation</div><div class="st">Strong reviews, no website — not a problem, just an opportunity.</div></div></div>
+  <div class="step"><div class="num">3</div><div><div class="sl">The reframe</div><div class="st">Not more work — better customers. People who arrive pre-sold.</div></div></div>
   <div class="step"><div class="num">4</div><div><div class="sl">The offer</div><div class="st">Build it first. No cost, no commitment. They just agree to look at a link.</div></div></div>
   <div class="step"><div class="num">5</div><div><div class="sl">Soft close</div><div class="st">"Would you be open to taking a look?" That's the whole ask.</div></div></div>
 </div>
@@ -229,30 +249,24 @@ var allBizBtns = document.querySelectorAll('.bb');
 var allBizPanels = document.querySelectorAll('.bp');
 var allOTrigs  = document.querySelectorAll('.otrig');
 var allOBodies = document.querySelectorAll('.obody');
-
 function showTab(id, btn) {
   allTabBtns.forEach(function(b){ b.classList.remove('on'); });
   allPanels.forEach(function(p){ p.classList.remove('on'); });
   btn.classList.add('on');
   document.getElementById('panel-' + id).classList.add('on');
 }
-
 function showBiz(id, btn) {
   allBizBtns.forEach(function(b){ b.classList.remove('on'); });
   allBizPanels.forEach(function(p){ p.classList.remove('on'); });
   btn.classList.add('on');
   document.getElementById('biz-' + id).classList.add('on');
 }
-
 function showObj(id, btn) {
   var body = document.getElementById(id);
   var isOpen = body.classList.contains('on');
   allOTrigs.forEach(function(t){ t.classList.remove('on'); });
   allOBodies.forEach(function(b){ b.classList.remove('on'); });
-  if (!isOpen) {
-    btn.classList.add('on');
-    body.classList.add('on');
-  }
+  if (!isOpen) { btn.classList.add('on'); body.classList.add('on'); }
 }
 </script>
 </body>
